@@ -46,6 +46,7 @@ function draw() {
     var dy = abs( y - yHalf );
     var d = sqrt( dx*dx + dy*dy );
     var dRatio = d / maxD;
+    dRatio *= dRatio;
     //console.log( dRatio , d , maxRad );
 
 
