@@ -3,8 +3,6 @@ setupGlobalVariables = function() {
   yRes = windowHeight;
   minRes = min( xRes , yRes );
   maxRes = max( xRes , yRes );
-  xHalf = xRes*0.5;
-  yHalf = yRes*0.5;
   maxD = 0.5*sqrt( xRes*xRes + yRes*yRes );
   fillAlpha = 50;
   centerColor = color( 232 , 11 , 66 , fillAlpha );
@@ -12,7 +10,7 @@ setupGlobalVariables = function() {
   minColorWiggle = 0.25;
   maxColorWiggle = 0.5;
   minRad = 0.01*minRes;
-  maxRad = 0.05*minRes;
+  sdRad = 0.05*minRes;
   dotsPerFrame = 100;
 }
 
@@ -29,14 +27,14 @@ function draw() {
     var dx = abs( x - xHalf );
     var dy = abs( y - yHalf );
     var d = sqrt( dx*dx + dy*dy );
-    var dRatio = d / maxD;
-    dRatio *= dRatio;
+    var dRatio = (d / maxD)^2;
+    //dRatio *= dRatio;
     var rColor = lerpColor( centerColor , outsideColor , dRatio );
     var drawColor = lerpColor( centerColor , outsideColor , dRatio );
     var randColor = color( random( 0 , 255) , random( 0 , 255) , random( 0 , 255) );
     var colorWiggle =  random( minColorWiggle , minColorWiggle );
     drawColor = lerpColor( drawColor , randColor , colorWiggle );
-    var r = minRad + abs( randomGaussian( 0 , maxRad ) );
+    var r = minRad + abs( randomGaussian( 0 , sdRad ) );
     fill( drawColor );
     ellipse( x , y , r );
   }
