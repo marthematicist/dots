@@ -27,7 +27,7 @@ function draw() {
     var dx = abs( x - 0.5*xRes );
     var dy = abs( y - 0.5*yRes );
     var d = sqrt( dx*dx + dy*dy );
-    var dRatio = pow( d/maxD , 2 );
+    var dRatio =  d*d / (maxD*maxD);
     //dRatio *= dRatio;
     var rColor = lerpColor( centerColor , outsideColor , dRatio );
     var drawColor = lerpColor( centerColor , outsideColor , dRatio );
