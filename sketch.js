@@ -24,8 +24,8 @@ function draw() {
   for( var i = 0 ; i < dotsPerFrame ; i++ ) {
     var x = random( 0 , xRes );
     var y = random( 0 , yRes );
-    var dx = abs( x - xHalf );
-    var dy = abs( y - yHalf );
+    var dx = abs( x - 0.5*xRes );
+    var dy = abs( y - 0.5*yRes );
     var d = sqrt( dx*dx + dy*dy );
     var dRatio = (d / maxD)^2;
     //dRatio *= dRatio;
