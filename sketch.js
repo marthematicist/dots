@@ -52,8 +52,8 @@ function draw() {
     var xColor = lerpColor( leftColor , rightColor , xRatio );
     var yColor = lerpColor( topColor , bottomColor , yRatio );
     var rColor = lerpColor( centerColor , outsideColor , dRatio );
-    var drawColor = lerpColor( centerColor , outsideColor , dRatio );
-    //drawColor = lerpColor( drawColor , rColor , 0.5 );
+    var drawColor = lerpColor( xColor , yColor , 0.5 );
+    drawColor = lerpColor( drawColor , rColor , 0.5 );
     var randColor = color( random( 0 , 255) , random( 0 , 255) , random( 0 , 255) );
     var colorWiggle =  random( minColorWiggle , minColorWiggle );
     drawColor = lerpColor( drawColor , randColor , colorWiggle );
