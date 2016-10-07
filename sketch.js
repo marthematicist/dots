@@ -16,6 +16,8 @@ setupGlobalVariables = function() {
   
   minRad = 0.01*minRes;
   maxRad = 0.05*minRes;
+  
+  dotsPerFrame = 100;
 }
 
 function setup() {
@@ -27,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  for( var i = 0 ; i < 10 ; i++ ) {
+  for( var i = 0 ; i < dotsPerFrame ; i++ ) {
     var x = random( 0 , xRes );
     var y = random( 0 , yRes );
     var xRatio = x/xRes;
