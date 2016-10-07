@@ -4,10 +4,12 @@ setupGlobalVariables = function() {
   minRes = min( xRes , yRes );
   maxRes = max( xRes , yRes );
   
-  topColor = color( 66, 158 ,244 );
-  bottomColor = color( 89 , 249 , 113 );
-  leftColor = color( 89 , 249 , 175 );
-  rightColor = color( 87 , 29 , 247 );
+  fillAlpha = 50;
+  
+  topColor = color( 66, 158 , 244 , fillAlpha );
+  bottomColor = color( 89 , 249 , 113 , fillAlpha );
+  leftColor = color( 89 , 249 , 175 , fillAlpha );
+  rightColor = color( 87 , 29 , 247 , fillAlpha );
   
   minColorWiggle = 0.25;
   maxColorWiggle = 0.5;
