@@ -10,7 +10,7 @@ setupGlobalVariables = function() {
   rightColor = color( 87 , 29 , 247 );
   
   minColorWiggle = 0;
-  maxColorWiggle = 0.25;
+  maxColorWiggle = 0.5;
   
   minRad = 0.01*minRes;
   maxRad = 0.05*minRes;
