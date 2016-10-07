@@ -14,7 +14,7 @@ setupGlobalVariables = function() {
 }
 
 function setup() {
-  createCanvas( xRex , yRes );
+  createCanvas( xRes , yRes );
   background( 255 , 255 , 255 );
 }
 
