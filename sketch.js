@@ -5,9 +5,9 @@ setupGlobalVariables = function() {
   maxRes = max( xRes , yRes );
   xHalf = xRes*0.5;
   yHalf = yRes*0.5;
-  maxRad = 0.5*sqrt( xRes*xRes + yRes*yRes );
+  maxD = 0.5*sqrt( xRes*xRes + yRes*yRes );
   
-  console.log( xRes , yRes , maxRad );
+  //console.log( xRes , yRes , maxRad );
 
   
   fillAlpha = 50;
@@ -45,8 +45,8 @@ function draw() {
     var dx = abs( x - xHalf );
     var dy = abs( y - yHalf );
     var d = sqrt( dx*dx + dy*dy );
-    var dRatio = d / maxRad;
-    console.log( dRatio , d , maxRad );
+    var dRatio = d / maxD;
+    //console.log( dRatio , d , maxRad );
 
 
     var xColor = lerpColor( leftColor , rightColor , xRatio );
