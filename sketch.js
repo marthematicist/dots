@@ -5,7 +5,7 @@ setupGlobalVariables = function() {
   maxRes = max( xRes , yRes );
   xHalf = xRes*0.5;
   yHalf = yRes*0.5;
-  maxRad = sqrt( xHalf*xHalf + yHalf*yHalf );
+  maxRad = 0.5*sqrt( xRes*xRes + yRes*yRes );
 
   
   fillAlpha = 50;
