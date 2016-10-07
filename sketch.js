@@ -27,22 +27,24 @@ function setup() {
 }
 
 function draw() {
-  var x = random( 0 , xRes );
-  var y = random( 0 , yRes );
-  var xRatio = x/xRes;
-  var yRatio = y/yRes;
-  
-  
-  var xColor = lerpColor( leftColor , rightColor , xRatio );
-  var yColor = lerpColor( topColor , bottomColor , yRatio );
-  var drawColor = lerpColor( xColor , yColor , 0.5 );
-  var randColor = color( random( 0 , 255) , random( 0 , 255) , random( 0 , 255) );
-  var colorWiggle =  random( minColorWiggle , minColorWiggle );
-  drawColor = lerpColor( drawColor , randColor , colorWiggle );
-  
-  var r = random( minRad , maxRad );
-  
-  fill( drawColor );
-  
-  ellipse( x , y , r );
+  for( var i = 0 ; i < 10 ; i++ ) {
+    var x = random( 0 , xRes );
+    var y = random( 0 , yRes );
+    var xRatio = x/xRes;
+    var yRatio = y/yRes;
+
+
+    var xColor = lerpColor( leftColor , rightColor , xRatio );
+    var yColor = lerpColor( topColor , bottomColor , yRatio );
+    var drawColor = lerpColor( xColor , yColor , 0.5 );
+    var randColor = color( random( 0 , 255) , random( 0 , 255) , random( 0 , 255) );
+    var colorWiggle =  random( minColorWiggle , minColorWiggle );
+    drawColor = lerpColor( drawColor , randColor , colorWiggle );
+
+    var r = random( minRad , maxRad );
+
+    fill( drawColor );
+
+    ellipse( x , y , r );
+  }
 }
