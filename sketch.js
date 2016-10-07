@@ -43,7 +43,7 @@ function draw() {
     var colorWiggle =  random( minColorWiggle , minColorWiggle );
     drawColor = lerpColor( drawColor , randColor , colorWiggle );
 
-    var r = random( minRad , maxRad );
+    var r = minRad + maxRad*abs( randomGaussian() );
 
     fill( drawColor );
 
