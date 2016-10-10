@@ -52,6 +52,7 @@ function draw() {
   }
 
   function keyTyped() {
+    console.log( 'hey, a key was typed');
     if( key == 's' ) {
       saveCanvas( 'canvas' , 'jpg' );
       console.log("saved");
