@@ -20,7 +20,7 @@ setupGlobalVariables = function() {
 function setup() {
   setupGlobalVariables();
   createCanvas( xRes , yRes );
-  background( 0 , 0 , 0 , 1 );
+  background( 0 , 0 , 100 , 1 );
 }
 
 function draw() {
