@@ -52,7 +52,7 @@ function draw() {
   }
 
   function keyTyped() {
-    if( key === 's' ) {
+    if( key == 's' ) {
       saveCanvas( 'canvas' , 'jpg' );
       console.log("saved");
     }
