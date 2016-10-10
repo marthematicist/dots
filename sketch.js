@@ -53,7 +53,7 @@ function draw() {
 
   function keyPressed() {
     console.log( 'hey, a key was typed');
-    if( key == 's' ) {
+    if( key === 's' ) {
       saveCanvas( 'canvas' , 'jpg' );
       console.log("saved");
     }
