@@ -1,13 +1,15 @@
 setupGlobalVariables = function() {
+  colorMode( HSB );
   xRes = windowWidth;
   yRes = windowHeight;
   minRes = min( xRes , yRes );
   maxRes = max( xRes , yRes );
   maxD = 0.5*sqrt( xRes*xRes + yRes*yRes );
-  fillAlpha = 50;
-  centerColor = color( 232 , 11 , 66 , fillAlpha );
-  // outsideColor = color( 29 , 165 , 249 , fillAlpha );
-  outsideColor = color( 27 , 25 , 150 , fillAlpha );
+  fillAlpha = 50/255;
+  centerColor = color( random(0,360) , 100 , 100 , fillAlpha );
+  outsideColor = color(  random(0,360) , 100 , 100 , fillAlpha );
+  //centerColor = color( 232 , 11 , 66 , fillAlpha );
+  //outsideColor = color( 27 , 25 , 150 , fillAlpha );
   minColorWiggle = 0.25;
   maxColorWiggle = 0.5;
   minRad = 0.01*minRes;
