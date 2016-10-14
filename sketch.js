@@ -14,7 +14,7 @@ setupGlobalVariables = function() {
   maxColorWiggle = 0.5;
   minRad = 0.01*minRes;
   sdRad = 0.05*minRes;
-  dotsPerFrame = 50;
+  dotsPerFrame = 1;
   msPerScene = 5000;
   startTime = 0 ;
 }
