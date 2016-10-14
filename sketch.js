@@ -15,7 +15,7 @@ setupGlobalVariables = function() {
   minRad = 0.01*minRes;
   sdRad = 0.05*minRes;
   dotsPerFrame = 10;
-  msPerScene = 5000;
+  msPerScene = 10000;
   startTime = 0 ;
 }
 
