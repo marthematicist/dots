@@ -8,6 +8,7 @@ setupGlobalVariables = function() {
   fillAlpha = 50/255;
   centerColor = color( random(0,360) , 100 , 100 , fillAlpha );
   outsideColor = color( ( hue(centerColor) + random(50,100) )%360 , 100 , 100 , fillAlpha );
+  console.log( hue(centerColor) , hue(outsideColor) );
   //centerColor = color( 232 , 11 , 66 , fillAlpha );
   //outsideColor = color( 27 , 25 , 150 , fillAlpha );
   minColorWiggle = 0.25;
