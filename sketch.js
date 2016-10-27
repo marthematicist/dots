@@ -29,7 +29,7 @@ function draw() {
   if( millis() - startTime > msPerScene ) {
     background( 0 , 0 , 100 , 1 );
     centerColor = color( random(0,360) , 100 , 100 , fillAlpha );
-    outsideColor = color(  random(0,360) , 100 , 100 , fillAlpha );
+    outsideColor = color( ( centerColor.hue() + random(50,100) )%360 , 100 , 100 , fillAlpha );
     startTime = millis();
   } else {
     for( var i = 0 ; i < dotsPerFrame ; i++ ) {
